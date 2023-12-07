@@ -14,6 +14,7 @@ export class ResultadosComponent implements OnInit{
 
   ngOnInit(): void {
     this.resultadosF();
+    this.prediccionesF();
   }
 
   resultadosF() {

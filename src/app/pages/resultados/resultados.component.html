@@ -1,10 +1,12 @@
 <div>
     <h2>DATA API</h2>
-    <div *ngFor="let resultado of resultadosV">
+    <div *ngFor="let resultado of resultadosV; index as i">
         <h5>{{ resultado.strEvent }}</h5>
         <p>{{ resultado.dateEvent }}</p>
         <p>{{ resultado.strVenue }}</p>
         <p>{{ resultado.intHomeScore }} - {{ resultado.intAwayScore }}</p>
         <img [src]="resultado.strThumb" alt="O">
+        <h5>Predicción hecha:</h5>
+        <p>{{ prediccionesV[i].message.content }}</p>
     </div>
 </div>
