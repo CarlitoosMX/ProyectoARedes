@@ -1,15 +1,17 @@
 <body>
     <div>
-        <div class="card" *ngFor="let resultado of resultadosV">
+        <div class="card" *ngFor="let resultado of resultadosV; index as i">
             <div class="card-body">
                 <h5>{{ resultado.strEvent }}</h5>
-        <p>{{ resultado.dateEvent }}</p>
-        <p>{{ resultado.strVenue }}</p>
-        <p>{{ resultado.intHomeScore }} - {{ resultado.intAwayScore }}</p>
+                <p>{{ resultado.dateEvent }}</p>
+                <p>{{ resultado.strVenue }}</p>
+                <p>{{ resultado.intHomeScore }} - {{ resultado.intAwayScore }}</p>>
             </div>
             <div class="image-container">
                 <img [src]="resultado.strThumb" class="card-img-bottom smaller-image" alt="O">
             </div>
+            <h5>Predicción realizada:</h5>
+            <p>{{ prediccionesV[i].message.content }}</p>
         </div>
     </div>
 </body>

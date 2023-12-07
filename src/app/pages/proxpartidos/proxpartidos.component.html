@@ -9,7 +9,8 @@
             <div class="image-container">
                 <img [src]="partido.strThumb" class="card-img-bottom smaller-image" alt="O">
             </div>
-            <button>Hacer predicción</button>
+            <button (click)="prediction(partido.strHomeTeam, partido.strAwayTeam)">Predicción</button>
+            <p>{{ prediccion }}</p>
         </div>
     </div>
 </body>
