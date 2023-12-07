@@ -11,10 +11,11 @@ import { RouterModule } from '@angular/router';
 
 import { SharedModule } from './shared/shared.module';
 import { HttpClientModule } from '@angular/common/http';
+import { PagesModule } from './pages/pages.module';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
@@ -24,6 +25,7 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     RouterModule,
     SharedModule,
+    PagesModule
   ],
   providers: [],
   bootstrap: [AppComponent]
