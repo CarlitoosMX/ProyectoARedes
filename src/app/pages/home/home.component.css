@@ -1,3 +1,44 @@
-*{
-    padding: 100px;
+body{
+    padding: 50px;
+    margin: 0px;
+}
+.separador{
+    background-color: rgb(46, 46, 46);
+    width: 1298px;
+    height: 10px;
+    background-size: cover;
+}
+.card{
+    background: linear-gradient(rgba(5,7,12,0.75), rgba(5,7,12,0.75))
+    ,url(../../../assets/images/fondo1.jpg) no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.contenido1{
+    padding: 0px;
+}
+
+.contenedor2{
+    background: linear-gradient(rgba(5,7,12,0.75), rgba(5,7,12,0.75))
+    ,url(../../../assets/images/fondo2.webp) no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.contenido2{
+    padding: 0px;
+}
+
+
+.contenido3{
+    padding: 0px;
 }
