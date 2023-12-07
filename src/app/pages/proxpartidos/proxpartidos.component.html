@@ -1,12 +1,10 @@
 <div>
     <h2>DATA API</h2>
-    <ul>
-        <div *ngFor="let partido of ppartidos">
-            <h5>{{ partido.strEvent }}</h5>
-            <p>{{ partido.dateEvent }}</p>
-            <p>{{ partido.strVenue }}</p>
-            <img [src]="partido.strThumb" alt="O">
-            <button>Hacer predicción</button>
-        </div>
-    </ul>
+    <div *ngFor="let partido of ppartidos">
+        <h5>{{ partido.strEvent }}</h5>
+        <p>{{ partido.dateEvent }}</p>
+        <p>{{ partido.strVenue }}</p>
+        <img [src]="partido.strThumb" alt="O">
+        <button>Hacer predicción</button>
+    </div>
 </div>

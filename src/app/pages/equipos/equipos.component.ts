@@ -7,10 +7,18 @@ import { ApiService } from '../../service/api.service';
   styleUrls: ['./equipos.component.css']
 })
 export class EquiposComponent implements OnInit{
-  equipos: any[] = [];
+  equipos: any;
 
   constructor(private apiService: ApiService){}
 
   ngOnInit(): void {
+    this.equiposF();
+  }
+
+  equiposF() {
+    this.apiService.getTeams().subscribe((data) => {
+      this.equipos = data.teams;
+      console.log(this.equipos);
+    });
   }
 }

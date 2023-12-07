@@ -1,1 +1,7 @@
-<p>equipos works!</p>
+<div>
+    <h2>DATA API</h2>
+    <div *ngFor="let equipo of equipos">
+        <img [src]="equipo.strTeamBadge" alt="O">
+        <h5>{{ equipo.strTeam }}</h5>
+    </div>
+</div>
