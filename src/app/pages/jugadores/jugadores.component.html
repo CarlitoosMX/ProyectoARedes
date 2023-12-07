@@ -1,8 +1,11 @@
-<div>
-    <h2>DATA API</h2>
-    <div *ngFor="let jugador of jugadoresV">
-        <img [src]="jugador.strThumb" alt="O">
-        <h5>{{ jugador.strPlayer }}</h5>
-        <p>{{ jugador.strNumber }}</p>
+<body>
+    <div class="card-container">
+        <div class="card" style="width: 18rem;" *ngFor="let jugador of jugadoresV">
+            <img [src]="jugador.strThumb" class="card-img-bottom" alt="...">
+            <div class="card-body">
+                <h5>{{ jugador.strPlayer }}</h5>
+                <p>{{ jugador.strNumber }}</p>
+            </div>
+        </div>
     </div>
-</div>
+</body>

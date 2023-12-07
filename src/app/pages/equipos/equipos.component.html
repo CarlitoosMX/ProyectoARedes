@@ -1,7 +1,10 @@
-<div>
-    <h2>DATA API</h2>
-    <div *ngFor="let equipo of equipos">
-        <img [src]="equipo.strTeamBadge" alt="O">
-        <h5>{{ equipo.strTeam }}</h5>
+<body>
+    <div class="card-container">
+        <div class="card" style="width: 18rem;" *ngFor="let equipo of equipos">
+            <img [src]="equipo.strTeamBadge" class="card-img-bottom" alt="...">
+            <div class="card-body">
+                <h5>{{ equipo.strTeam }}</h5>
+            </div>
+        </div>
     </div>
-</div>
+</body>
