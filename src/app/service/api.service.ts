@@ -23,7 +23,7 @@ export class ApiService {
   }
 
   public getTeams(): Observable<any> {
-    const url = 'http://34.125.186.179:3000/data/equipos';
+    const url = 'http://34.125.127.9:3000/data/equipos';
     return this.http.get<any>(url);
   }
 
@@ -33,7 +33,7 @@ export class ApiService {
   }
 
   public getPlayers(): Observable<any> {
-    const url = 'http://34.125.186.179:3000/data/jugadores';
+    const url = 'http://34.125.127.9:3000/data/jugadores';
     return this.http.get<any>(url);
   }
 
@@ -43,12 +43,12 @@ export class ApiService {
   }
 
   public getUsers(): Observable<any> {
-    const url = 'http://34.125.186.179:3000/data/usuarios';
+    const url = 'http://34.125.127.9:3000/data/usuarios';
     return this.http.get<any>(url);
   }
 
   public requestPrediction(body: any): Observable<any> {
-    const headers = new HttpHeaders({'Content-Type': 'application/json', 'Authorization': 'Bearer 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'});
+    const headers = new HttpHeaders({'Content-Type': 'application/json', 'Authorization': 'Bearer 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'});
     return this.http.post<any>('https://api.openai.com/v1/chat/completions', body, { headers });
   }
 }

@@ -1,6 +1,6 @@
 <body>
     <div>
-        <div class="card" *ngFor="let partido of ppartidos">
+        <div class="card" *ngFor="let partido of ppartidos; index as i">
             <div class="card-body">
                 <h5>{{ partido.strEvent }}</h5>
                 <p>{{ partido.dateEvent }}</p>
@@ -9,8 +9,8 @@
             <div class="image-container">
                 <img [src]="partido.strThumb" class="card-img-bottom smaller-image" alt="O">
             </div>
-            <button (click)="prediction(partido.strHomeTeam, partido.strAwayTeam)">Predicción</button>
-            <p>{{ prediccion }}</p>
+            <button (click)="prediction(partido.strHomeTeam, partido.strAwayTeam, i)">Predicción</button>
+            <p>{{ prediccion[i] }}</p>
         </div>
     </div>
 </body>

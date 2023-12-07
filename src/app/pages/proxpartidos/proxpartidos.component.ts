@@ -8,7 +8,7 @@ import { ApiService, EventResponse } from '../../service/api.service';
 export class ProxpartidosComponent implements OnInit {
   // Usa la interfaz para definir el tipo de datos
   ppartidos: any;
-  prediccion: any;
+  prediccion: any[] = [];
 
   constructor(private apiService: ApiService) {}
 
@@ -25,7 +25,7 @@ export class ProxpartidosComponent implements OnInit {
     });
   }
 
-  prediction(equipo1: string, equipo2: string){
+  prediction(equipo1: string, equipo2: string, i: number){
     const predictionData = {
       "model": "gpt-3.5-turbo",
       "messages": [
@@ -36,7 +36,7 @@ export class ProxpartidosComponent implements OnInit {
 
     this.apiService.requestPrediction(predictionData).subscribe((response) => {
       console.log(response.choices[0].message.content);
-      this.prediccion = response.choices[0].message.content;
+      this.prediccion[i] = response.choices[0].message.content;
     });
   }
 }
