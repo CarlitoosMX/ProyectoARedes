@@ -16,9 +16,9 @@ export class ProxpartidosComponent implements OnInit {
   }
 
   partidos() {
-    this.apiService.getLastEvents('133602').subscribe((data: EventResponse) => {
+    this.apiService.getLastEvents('133602').subscribe((data) => {
       // Asigna la propiedad específica del objeto JSON que esperas recibir
-      this.ppartidos = data.events;
+      this.ppartidos = data;
       console.log(this.ppartidos);
     });
   }

@@ -17,8 +17,8 @@ export class ApiService {
 
   constructor(private http: HttpClient) { }
 
-  public getLastEvents(teamId: string): Observable<EventResponse> {
+  public getLastEvents(teamId: string): Observable<any> {
     const url = `${this.urlApi2}?id=${teamId}`;
-    return this.http.get<EventResponse>(url);
+    return this.http.get<any>(url);
   }
 }
