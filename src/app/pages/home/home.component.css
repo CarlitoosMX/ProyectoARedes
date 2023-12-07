@@ -1,3 +1,7 @@
+*{
+    color: white;
+}
+
 body{
     padding: 50px;
     margin: 0px;
@@ -8,9 +12,31 @@ body{
     height: 10px;
     background-size: cover;
 }
-.card{
+#c1{
     background: linear-gradient(rgba(5,7,12,0.75), rgba(5,7,12,0.75))
     ,url(../../../assets/images/fondo1.jpg) no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+#c2{
+    background: linear-gradient(rgba(5,7,12,0.75), rgba(5,7,12,0.75))
+    ,url(../../../assets/images/fondo2.webp) no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+#c3{
+    background: linear-gradient(rgba(5,7,12,0.75), rgba(5,7,12,0.75))
+    ,url(../../../assets/images/fondo3.avif) no-repeat center center fixed;
     background-size: cover;
     display: flex;
     justify-content: center;
@@ -32,6 +58,14 @@ body{
     align-items: center;
     display: flex;
     flex-direction: column;
+}
+
+.card-text{
+    text-align: justify;
+}
+
+.card-title{
+    font-weight: bold;
 }
 
 .contenido2{
