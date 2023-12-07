@@ -11,23 +11,27 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:application",
+          "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "outputPath": "dist/proyecto-aredes",
             "index": "src/index.html",
-            "browser": "src/main.ts",
+            "main": "src/main.ts",
             "polyfills": [
               "zone.js"
             ],
             "tsConfig": "tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/manifest.webmanifest"
             ],
             "styles": [
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": ["node_modules/jquery/dist/jquery.slim.min.js", 
+                        "node_modules/popper.js/dist/umd/popper.min.js", 
+                        "node_modules/bootstrap/dist/js/bootstrap.min.js"
+                      ]
           },
           "configurations": {
             "production": {
@@ -57,10 +61,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "ProyectoARedes:build:production"
+              "browserTarget": "ProyectoARedes:build:production"
             },
             "development": {
-              "buildTarget": "ProyectoARedes:build:development"
+              "browserTarget": "ProyectoARedes:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -68,7 +72,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "ProyectoARedes:build"
+            "browserTarget": "ProyectoARedes:build"
           }
         },
         "test": {
@@ -81,7 +85,8 @@
             "tsConfig": "tsconfig.spec.json",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/manifest.webmanifest"
             ],
             "styles": [
               "src/styles.css"
@@ -91,5 +96,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }
